@@ -39,8 +39,8 @@ while(<PASSFILE>){
 }
 close PASSFILE;
 
-#autocheck of bhvm05 and bhvm06
-foreach (("bhvm05","bhvm06")){
+#autocheck of host1 and host2
+foreach (("host1","host2")){
 
 #my $exp = Expect->spawn("ssh $user\@$host  'ssh $_ \"echo $com1; hostname; echo $com2; cat $bakdir/2015-*/$chkfile ; echo $com3;grep $patt  $baklog | tail -n $num \" ' ");
 my $exp = Expect->spawn("ssh $user\@$host  'ssh $_ \"
