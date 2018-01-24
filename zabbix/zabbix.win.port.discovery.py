@@ -4,7 +4,7 @@
 import os
 import re
 
-command ='netstat -ant|find "TCP"'
+command ='netstat -ant|find "TCP"| find "LISTENING"'
 res=os.popen(command)
 port_set=set()
 
